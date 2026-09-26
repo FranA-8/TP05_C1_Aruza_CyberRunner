@@ -6,7 +6,7 @@ public class PowerUpsGenerator : MonoBehaviour
     [SerializeField] private GameObject powerUpPrefab;
     [SerializeField] private float spawnTimer = 7;
     [SerializeField] private float despawnTimer = 2;
-    [SerializeField] private float powerUpPositionY = -1.5f;
+    [SerializeField] private float powerUpPositionY = -2.5f;
     private float timer;
 
     private void Update()

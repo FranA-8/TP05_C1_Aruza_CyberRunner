@@ -15,6 +15,7 @@ public class UiPauseMenu : MonoBehaviour
     [SerializeField] private Button backSettingsButton;
     [SerializeField] private Button backCreditsButton;
     bool isPaused = false;
+    bool canPause = true;
 
     private void Awake()
     {
@@ -37,7 +38,7 @@ public class UiPauseMenu : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && canPause == true)
         {
             isPaused = !isPaused;
             pauseMenuPanel.SetActive(isPaused);
@@ -52,6 +53,7 @@ public class UiPauseMenu : MonoBehaviour
     {
         pauseMenuPanel.SetActive(false);
         isPaused = false;
+        canPause = true;
         Time.timeScale = 1f;
     }
     private void OnSettingsButtonClicked()
@@ -59,13 +61,16 @@ public class UiPauseMenu : MonoBehaviour
         pauseMenuPanel.SetActive(false);
         settingsMenuPanel.SetActive(true);
         isPaused = true;
+        canPause = false;
         Time.timeScale = 0f;
     }
     private void OnBackSettingsButtonClicked()
     {
         settingsMenuPanel.SetActive(false);
-        isPaused = false;
-        Time.timeScale = 1f;
+        pauseMenuPanel.SetActive(true);
+        isPaused = true;
+        canPause = false;
+        Time.timeScale = 0f;
     }
 
     private void OnCreditsButtonClicked()
@@ -73,13 +78,16 @@ public class UiPauseMenu : MonoBehaviour
         pauseMenuPanel.SetActive(false);
         creditsMenuPanel.SetActive(true);
         isPaused = true;
+        canPause = false;
         Time.timeScale = 0f;
     }
     private void OnBackCreditsButtonClicked()
     {
         creditsMenuPanel.SetActive(false);
-        isPaused = false;
-        Time.timeScale = 1f;
+        pauseMenuPanel.SetActive(true);
+        isPaused = true;
+        canPause = false;
+        Time.timeScale = 0f;
     }
 
     private void OnExitButtonClicked()

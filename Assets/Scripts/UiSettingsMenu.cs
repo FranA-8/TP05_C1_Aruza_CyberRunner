@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class UiSettingsMenu : MonoBehaviour
 {
-    private AudioSource audioSource;
     [SerializeField] private AudioMixer mixer;
-    [SerializeField] private GameObject player;
     [SerializeField] private Button exit;
     [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject settingsMenuPanel;
@@ -26,11 +24,10 @@ public class UiSettingsMenu : MonoBehaviour
     [SerializeField] private TMP_Text volumeSFXNumber;
     [SerializeField] private TMP_Text volumeUiNumber;
     private SpriteRenderer playerSprite;
-    private SpriteRenderer playerSpriteDisplay;
     private void Awake()
     {
-        playerSprite = player.GetComponent<SpriteRenderer>();
-        audioSource.GetComponent<AudioSource>();
+        playerSprite = GetComponent<SpriteRenderer>();
+
         exit.onClick.AddListener(OnExitButtonClicked);
         colorSliderRed.onValueChanged.AddListener(OnColorSliderRedP1Changed);
         colorSliderGreen.onValueChanged.AddListener(OnColorSliderGreenP1Changed);
@@ -57,10 +54,6 @@ public class UiSettingsMenu : MonoBehaviour
     {
         settingsMenuPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
-        if (audioSource != null)
-        {
-            audioSource.Play();
-        }
     }
 
     private void OnColorSliderRedP1Changed(float value)
@@ -70,7 +63,6 @@ public class UiSettingsMenu : MonoBehaviour
         float g = colorSliderGreen.value / 255f;
         float b = colorSliderBlue.value / 255f;
         playerSprite.color = new Color(r, g, b, 1f);
-        playerSpriteDisplay.color = new Color(r, g, b, 1f);
     }
     private void OnColorSliderGreenP1Changed(float value)
     {
@@ -79,7 +71,6 @@ public class UiSettingsMenu : MonoBehaviour
         float g = value / 255f;
         float b = colorSliderBlue.value / 255f;
         playerSprite.color = new Color(r, g, b, 1f);
-        playerSpriteDisplay.color = new Color(r, g, b, 1f);
     }
     private void OnColorSliderBlueP1Changed(float value)
     {
@@ -88,7 +79,6 @@ public class UiSettingsMenu : MonoBehaviour
         float g = colorSliderGreen.value / 255f;
         float b = value / 255f;
         playerSprite.color = new Color(r, g, b, 1f);
-        playerSpriteDisplay.color = new Color(r, g, b, 1f);
     }
     private void OnVolumeMasterChanged(float value)
     {

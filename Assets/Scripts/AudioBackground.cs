@@ -1,16 +1,24 @@
+using System.Threading;
 using UnityEngine;
 
 public class AudioBackground : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private AudioSource audioSource;
+    private float gameStart = 0;
+    private float timer;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        timer += Time.deltaTime;
+
+        if (timer >= gameStart)
+        {
+            if (audioSource != null)
+            {
+
+                audioSource.Play();
+                
+            }
+        }
     }
 }

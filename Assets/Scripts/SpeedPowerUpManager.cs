@@ -9,7 +9,7 @@ public class SpeedPowerUpManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            player.moveSpeed += powerUpSpeed;
+            player.PowerUpMoveSpeed(powerUpSpeed);
 
         }
     }

@@ -7,8 +7,8 @@ public class ObstaclesGenerator : MonoBehaviour
     [SerializeField] private float spawnTimer = 3;
     [SerializeField] private float despawnTimer = 2;
     [SerializeField] private float obstaclePositionY = -3;
-    private float playerPositionX = -6.65f;
-    private float playerPositionY = -2.55f;
+    private float playerPositionX = -2.35f;
+    private float playerPositionY = -5.88f;
     private float timer;
 
     private void Update()
