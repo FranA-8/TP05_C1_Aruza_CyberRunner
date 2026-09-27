@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Floor
+  - ParalaxBackground2
+  - ParalaxBackground3
+  - Obstacle
+  - PowerUp
   layers:
   - Default
   - TransparentFX
@@ -14,9 +18,9 @@ TagManager:
   - UI
   - Player
   - Background
-  - 
-  - 
-  - 
+  - Building1
+  - Building2
+  - Building3
   - 
   - 
   - 
