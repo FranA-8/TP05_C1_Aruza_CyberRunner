@@ -194,7 +194,7 @@ MonoBehaviour:
   player: {fileID: 0}
   powerUpPrefab: {fileID: 3558341821351646707}
   spawnTimer: 15
-  despawnTimer: 4
+  despawnTimer: 6
   powerUpPositionY: -1
   powerUpPositionX: 35
 --- !u!58 &6800927120977928280
@@ -247,7 +247,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: f02f7c04218286745abbcb8a6ed95fc1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4
-  m_Pitch: -2
+  m_Pitch: 3
   Loop: 0
   Mute: 0
   Spatialize: 0

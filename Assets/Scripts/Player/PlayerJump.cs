@@ -5,7 +5,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerDataSo data;
     [SerializeField] private GameObject player;
-    public float jumpForce;
+    [SerializeField] private float jumpForce;
     private Rigidbody2D rb;
     bool canJump = false;
 
@@ -21,10 +21,6 @@ public class PlayerJump : MonoBehaviour
     public void PowerUpJumpForce(float value)
     {
         jumpForce += value;
-        if (jumpForce >= 25)
-        {
-            jumpForce = 25;
-        }
     }
 
     public float GetJumpForce()

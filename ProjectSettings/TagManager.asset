@@ -9,6 +9,9 @@ TagManager:
   - ParalaxBackground3
   - Obstacle
   - PowerUp
+  - LoopWall
+  - PowerUpSpeed
+  - PowerUpJump
   layers:
   - Default
   - TransparentFX

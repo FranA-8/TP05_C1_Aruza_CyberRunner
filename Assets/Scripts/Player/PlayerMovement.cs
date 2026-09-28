@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private float playerPositionX = -2.35f;
+    private float playerPositionY = -5.88f;
     [SerializeField] private PlayerDataSo data;
     [SerializeField] private GameObject player;
     [SerializeField] private float moveSpeed;
@@ -14,10 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public void PowerUpMoveSpeed(float value)
     {
         moveSpeed += value;
-        if (moveSpeed >= 800)
-        {
-            moveSpeed = 800;
-        }
     }
 
     public float GetMoveSpeed()
@@ -31,6 +29,18 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce(new Vector2(moveSpeed * Time.fixedDeltaTime, 0f));
-        rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxSpeed);
+
+        float velocityX = Mathf.Clamp(rb.linearVelocity.x, 0f, maxSpeed);
+
+        rb.linearVelocity = new Vector2 (velocityX, rb.linearVelocity.y);
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("LoopWall"))
+        {
+            player.transform.position = new Vector2(playerPositionX, playerPositionY);
+
+        }
     }
 }

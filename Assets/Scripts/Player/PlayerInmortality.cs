@@ -7,7 +7,11 @@ public class PlayerInmortality : MonoBehaviour
     [SerializeField] private GameObject playerLife1;
     [SerializeField] private GameObject playerLife2;
     [SerializeField] private GameObject playerLife3;
-    [SerializeField] private GameObject powerUpPrefab;
+    [SerializeField] private GameObject powerUpInmortality;
+    [SerializeField] private GameObject powerUpSpeed;
+    [SerializeField] private GameObject powerUpJump;
+    [SerializeField] private TrailRenderer invencibilityTrail;
+    [SerializeField] private ParticleSystem deathParticles;
     private int playerLives = 1;
     private bool isInmortal = false;
     private float playerPositionX = -2.35f;
@@ -62,12 +66,31 @@ public class PlayerInmortality : MonoBehaviour
         return isInmortal;
     }
 
+    public void InmortalityTrail(bool inmortalTrail)
+    {
+        invencibilityTrail.enabled = inmortalTrail;
+    }
+
+    public void DeathParticles(bool enableParticles)
+    {
+        deathParticles.Play();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PowerUp"))
         {
-            Destroy(powerUpPrefab, 1f);
+            Destroy(powerUpInmortality, 1f);
         }
+        else if (collision.gameObject.CompareTag("PowerUpSpeed"))
+        {
+            Destroy(powerUpSpeed, 1f);
+        }
+        else if (collision.gameObject.CompareTag("PowerUpJump"))
+        {
+            Destroy(powerUpJump, 1f);
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -93,6 +116,7 @@ public class PlayerInmortality : MonoBehaviour
             }
             else if (GetPlayerLives() == 1)
             {
+                deathParticles.Play();
                 player.transform.position = new Vector2(playerPositionX, playerPositionY);
                 playerLife1.SetActive(false);
                 playerLife1.SetActive(true);

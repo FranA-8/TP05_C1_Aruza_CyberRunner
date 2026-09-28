@@ -6,6 +6,8 @@ public class JumpPowerUpManager : MonoBehaviour
     [SerializeField] private GameObject powerUpPrefab;
     [SerializeField] private PlayerJump player;
     [SerializeField] private float powerUpJump;
+    private float powerUpJumpTimer = 5;
+    private float timer;
     private bool collected = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,9 +21,23 @@ public class JumpPowerUpManager : MonoBehaviour
 
             animator.SetTrigger("Collected");
 
-            if (collected == true)
+            timer = powerUpJumpTimer;
+        }
+    }
+
+    private void Update()
+    {
+        if (collected == true)
+        {
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
             {
-                Destroy(powerUpPrefab, 1f);
+                player.PowerUpJumpForce(-powerUpJump);
+
+                collected = false;
+
+                timer = powerUpJumpTimer;
             }
         }
     }

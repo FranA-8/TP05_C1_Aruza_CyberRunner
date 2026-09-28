@@ -30,6 +30,7 @@ public class UiMainMenu : MonoBehaviour
     private void OnPlayClicked()
     {
         SceneManager.LoadScene("Gameplay");
+        Time.timeScale = 1f;
     }
 
     private void OnSettingsClicked()

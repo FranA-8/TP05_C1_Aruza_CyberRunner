@@ -31,14 +31,20 @@ public class InvencibilityPowerUpManager : MonoBehaviour
         if (collected == true)
         {
             timer -= Time.deltaTime;
+
             invencibilityCountDownPanel.SetActive(true);
+
             invencibilityNumberText.text = timer.ToString("f0");
+
+            player.InmortalityTrail(true);
 
             if (timer <= 0)
             {
                 player.IsPlayerInmortal(false);
 
                 invencibilityCountDownPanel.SetActive(false);
+
+                player.InmortalityTrail(false);
 
                 collected = false;
 

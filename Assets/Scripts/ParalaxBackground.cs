@@ -35,7 +35,7 @@ public class ParalaxBackground : MonoBehaviour
             }
             else
             {
-                current.localPosition = new Vector3(posX + scaleX, 0f, 0f);
+                current.localPosition = new Vector3(posX + scaleX, 4f, 0f);
             }
         }
     }

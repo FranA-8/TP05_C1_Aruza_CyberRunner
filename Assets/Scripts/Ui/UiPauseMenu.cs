@@ -43,9 +43,13 @@ public class UiPauseMenu : MonoBehaviour
             isPaused = !isPaused;
             pauseMenuPanel.SetActive(isPaused);
             if (isPaused)
+            {
                 Time.timeScale = 0f;
-            else 
+            } 
+            else
+            {
                 Time.timeScale = 1f;
+            }
         }
     }
 
@@ -93,6 +97,7 @@ public class UiPauseMenu : MonoBehaviour
     private void OnExitButtonClicked()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 0f;
     }
     
 }

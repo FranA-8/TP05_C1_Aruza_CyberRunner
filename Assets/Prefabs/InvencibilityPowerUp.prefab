@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 4726345160321132751}
   m_Layer: 0
   m_Name: InvencibilityPowerUp
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   player: {fileID: 0}
   powerUpPrefab: {fileID: 8870375565732291258}
   spawnTimer: 20
-  despawnTimer: 3
+  despawnTimer: 7
   powerUpPositionY: 0
   powerUpPositionX: 40
 --- !u!58 &2310161894092077228

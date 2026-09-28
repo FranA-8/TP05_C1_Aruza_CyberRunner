@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2264111280487347396}
   m_Layer: 0
   m_Name: SpeedPowerUp
-  m_TagString: Untagged
+  m_TagString: PowerUpSpeed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,9 +80,8 @@ MonoBehaviour:
   player: {fileID: 0}
   powerUpPrefab: {fileID: 6692387595631140010}
   spawnTimer: 7
-  despawnTimer: 5
+  despawnTimer: 6
   powerUpPositionY: -5.75
-  powerUpPositionX: 15
 --- !u!58 &6589575436903280389
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -296,7 +295,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 9163179789190762368, guid: 9f6f1e44c5d34b8458a7fe1522ffa268, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

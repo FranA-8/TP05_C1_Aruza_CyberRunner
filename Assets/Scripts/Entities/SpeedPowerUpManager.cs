@@ -6,7 +6,10 @@ public class SpeedPowerUpManager : MonoBehaviour
     [SerializeField] private GameObject powerUpPrefab;
     [SerializeField] private PlayerMovement player;
     [SerializeField] private float powerUpSpeed;
+    private float powerUpSpeedTimer = 5;
     private bool collected = false;
+    private float timer;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -17,9 +20,23 @@ public class SpeedPowerUpManager : MonoBehaviour
 
             animator.SetTrigger("Collected");
 
-            if (collected == true)
+            timer = powerUpSpeedTimer;
+        }
+    }
+
+    private void Update()
+    {
+        if (collected == true)
+        {
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
             {
-                Destroy(powerUpPrefab, 1f);
+                player.PowerUpMoveSpeed(-powerUpSpeed);
+
+                collected = false;
+
+                timer = powerUpSpeedTimer;
             }
         }
     }

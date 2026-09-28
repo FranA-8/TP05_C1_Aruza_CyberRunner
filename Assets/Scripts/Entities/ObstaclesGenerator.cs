@@ -15,7 +15,7 @@ public class ObstaclesGenerator : MonoBehaviour
 
         if (timer >= spawnTimer)
         {
-            float playerPositionX = player.transform.position.x + 15f;
+            float playerPositionX = player.transform.position.x + Random.Range(15f, 35f);
 
             GameObject i = Instantiate(obstaclePrefab, new Vector3(playerPositionX, obstaclePositionY, 0), transform.rotation);
             Destroy(i, despawnTimer);

@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &26403618 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5040719613981383493, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
-  m_PrefabInstance: {fileID: 1960243535}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &151462636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,26 +1811,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4947254574477884865, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
   m_PrefabInstance: {fileID: 1960243535}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26403618}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!114 &992410256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26403618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 156e004c212b7d54f8aa17ab227b3e4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioOnButtonClick
-  button: {fileID: 992410252}
-  audioSource: {fileID: 1388832434}
 --- !u!1 &1024981183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1884882835982069015, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
@@ -2765,6 +2746,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 552599435726103556, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 913871981041872719, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884882835982069015, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3107364111520197445, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114593423770610066, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351501143333109231, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4992561150441545534, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2849,21 +2854,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Settings
       objectReference: {fileID: 0}
-    - target: {fileID: 6181223739403418112, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
-      propertyPath: player
+    - target: {fileID: 5572725720673309359, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
+      propertyPath: audioSource
       value: 
-      objectReference: {fileID: 509632523}
+      objectReference: {fileID: 1388832434}
+    - target: {fileID: 5904699402422554144, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980800286817001791, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6181223739403418112, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
       propertyPath: mainMenuPanel
       value: 
       objectReference: {fileID: 241737906}
+    - target: {fileID: 8003226912785648081, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5040719613981383493, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 992410256}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c96e65a3ac78aa0488e7a637b8efc295, type: 3}
 --- !u!1 &2079285980
 GameObject:

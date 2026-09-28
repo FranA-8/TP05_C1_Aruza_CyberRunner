@@ -112,7 +112,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6186231880139380768, guid: b0d5f55136f0861419ffca48d1944581, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 3513483840506547848}
   m_Layer: 0
   m_Name: JumpPowerUp
-  m_TagString: Untagged
+  m_TagString: PowerUpJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
   player: {fileID: 0}
   powerUpPrefab: {fileID: 6570528331703593864}
   spawnTimer: 10
-  despawnTimer: 5
+  despawnTimer: 6
   powerUpPositionY: -2.5
   powerUpPositionX: 25
 --- !u!58 &6451149922444595020
