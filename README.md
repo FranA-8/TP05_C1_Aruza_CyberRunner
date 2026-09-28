@@ -11,8 +11,11 @@ Space Bar - Jump
 ## Power-Ups
 
 Speed Power-Up: Gives the player a speed boost for a limited amount of time.
+
 Jump Boost Power-Up: Gives the player a jump boost for a limited amount of time.
+
 Life Power-Up: Gives the player an extra life, allowing them to survive an additional hit.
+
 Invincibility Power-Up: Makes the player invulnerable for a limited amount of time.
 
 ## Developer
