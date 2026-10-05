@@ -12,6 +12,7 @@ public class PlayerInmortality : MonoBehaviour
     [SerializeField] private GameObject powerUpJump;
     [SerializeField] private TrailRenderer invencibilityTrail;
     [SerializeField] private ParticleSystem deathParticles;
+    [SerializeField] private GameObject gameOverPanel;
     private int playerLives = 1;
     private bool isInmortal = false;
     private float playerPositionX = -2.35f;
@@ -120,7 +121,8 @@ public class PlayerInmortality : MonoBehaviour
                 player.transform.position = new Vector2(playerPositionX, playerPositionY);
                 playerLife1.SetActive(false);
                 playerLife1.SetActive(true);
-
+                Time.timeScale = 0f;
+                gameOverPanel.SetActive(true);
             }
         }
     }
